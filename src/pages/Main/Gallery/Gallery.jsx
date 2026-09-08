@@ -9,11 +9,11 @@ const mockData = [
 ]
 
 export default function Gallery() {
-  return <section className="gallery">
+  return <section id="gallery" className="gallery">
     <h2>Галерея</h2>
     <div className="wrapper">
       <p>Избранные позиции</p>
-      <button>Весь каталог <span>→</span></button>
+      <a href="/catalog">Весь каталог <span>→</span></a>
     </div>
     <ul>
       {

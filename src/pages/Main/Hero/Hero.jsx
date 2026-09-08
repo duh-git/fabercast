@@ -10,8 +10,8 @@ export default function Hero() {
       </h1>
       <p>От создания проекта до идеального интерьера в вашем доме</p>
       <div className="action">
-        <button className="call">Позвонить нам</button>
-        <button className="catalog">Каталог</button>
+        <a href="tel:+74956666666" className="call">Позвонить нам</a>
+        <a href="/catalog" className="catalog">Каталог</a>
       </div>
     </div>
     <img src={HeroImage} style={{ width: "60vw" }} />

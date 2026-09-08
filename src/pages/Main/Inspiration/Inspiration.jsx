@@ -9,7 +9,7 @@ const mockData = [
 ]
 
 export default function Inspiration() {
-  return <section className="inspiration">
+  return <section id="inspiration" className="inspiration">
     <h2>Портфолио</h2>
     <div className="wrapper">
       <p>Работы, <br /> вдохновляющие нас</p>
@@ -18,7 +18,7 @@ export default function Inspiration() {
     <ul>
       {
         mockData.map((cardData) => {
-          return <InspirationCard  key={cardData.link} {...cardData} />
+          return <InspirationCard key={cardData.link} {...cardData} />
         })
       }
     </ul>

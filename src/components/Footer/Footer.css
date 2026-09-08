@@ -9,7 +9,8 @@ footer {
   div {
     letter-spacing: 0.12em;
 
-    p {
+    p,
+    a {
       font-size: 2.2rem;
     }
 
@@ -45,8 +46,8 @@ footer {
   }
 
   .social-group {
-    & > ul {
-      margin-top: 30px;
+    &>ul {
+      margin-top: 50px;
       flex-direction: row;
       justify-content: space-between;
 
@@ -55,7 +56,7 @@ footer {
       }
     }
 
-    button {
+    .leave-request {
       padding: 20px 35px;
       border: solid 1px #000000;
       border-radius: 4;

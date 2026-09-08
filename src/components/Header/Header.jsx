@@ -3,21 +3,21 @@ import "./Header.css"
 
 export default function Header() {
   return <header>
-    <div className="logo-wrapper">
+    <a href="/" className="logo-wrapper">
       <img src={logo} style={{ height: 80 }} alt="" />
       <div className="logo-text">
         <h2>fabercast</h2>
         <p>мебельная фабрика · 1978</p>
       </div>
-    </div>
+    </a>
     <nav>
       <ul>
-        <a href="">О нас</a>
-        <a href="">Галлерея</a>
-        <a href="">Каталог</a>
-        <a href="">Контакты</a>
+        <a href="/#about">О нас</a>
+        <a href="/#gallery">Галерея</a>
+        <a href="/catalog">Каталог</a>
+        <a href="/#contacts">Контакты</a>
       </ul>
     </nav>
-    <p className="phone-number">+7 (495) 666-66-66</p>
+    <a className="phone-number" href="tel:+74956666666">+7 (495) 666-66-66</a>
   </header>
 }

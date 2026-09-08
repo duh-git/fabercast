@@ -2,7 +2,7 @@ import "./About.css"
 import AboutImage from "/About.png"
 
 export default function About() {
-  return <section className="about">
+  return <section id="about" className="about">
     <div className="about-image-wrapper">
       <img src={AboutImage} />
       <p><span>46</span> <br />лет опыта</p>

@@ -2,9 +2,9 @@ import "./Contact.css"
 import ContactImage from "/Contact.png"
 
 export default function Contact() {
-  return <section className="contact">
+  return <section id="contacts" className="contact">
     <h2>Давайте создадим <br /> интерьер, который понравится <br /> именно вам</h2>
-    <button>Позвонить нам</button>
+    <a href="tel:+74956666666">Позвонить нам</a>
     <img src={ContactImage} />
   </section>
 }

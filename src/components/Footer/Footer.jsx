@@ -22,23 +22,23 @@ export default function Footer() {
     <div className="company-group">
       <p>О нас</p>
       <ul>
-        <li>Продукция</li>
-        <li>Портфолио</li>
-        <li>Контакты</li>
+        <li><a href="/catalog">Продукция</a></li>
+        <li><a href="/#inspiration">Портфолио</a></li>
+        <li><a href="/#contacts">Контакты</a></li>
       </ul>
     </div>
     <div className="contact-group">
-      <p>+7 (499) 666-66-66</p>
+      <a href="tel:+74956666666">+7 (499) 666-66-66</a>
       <ul>
         <li>г. Москва, ул. 8 марта, <br /> ТЦ “Яркость” 2-й этаж</li>
       </ul>
     </div>
     <div className="social-group">
-      <button>Оставить заявку</button>
+      <a className="leave-request" href="tel:+74956666666">Оставить заявку</a>
       <ul>
-        <li><img src="/src/assets/instagram.svg" alt="" /></li>
-        <li><img src="/src/assets/facebook.svg" alt="" /></li>
-        <li><img src="/src/assets/pinterest.svg" alt="" /></li>
+        <li><a href=""><img src="/src/assets/instagram.svg" alt="" /></a></li>
+        <li><a href=""><img src="/src/assets/facebook.svg" alt="" /></a></li>
+        <li><a href=""><img src="/src/assets/pinterest.svg" alt="" /></a></li>
       </ul>
     </div>
   </footer>

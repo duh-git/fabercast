@@ -1,0 +1,66 @@
+footer {
+  padding: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+
+  font-family: "Montserrat Alternates";
+
+  div {
+    letter-spacing: 0.12em;
+
+    p {
+      font-size: 2.2rem;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      margin-top: 20px;
+      gap: 20px;
+
+      color: #3E3E3E;
+      font-size: 1.8rem;
+    }
+  }
+
+  .logo-group {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    bottom: 30px;
+    height: 100%;
+
+    h2 {
+      font-family: "Cormorant Garamond";
+      font-size: 6.7rem;
+      margin-bottom: auto;
+    }
+
+    p {
+      font-family: "Geist";
+      font-size: 1.4rem;
+      color: #7A7A7A;
+    }
+  }
+
+  .social-group {
+    & > ul {
+      margin-top: 30px;
+      flex-direction: row;
+      justify-content: space-between;
+
+      img {
+        width: 45px;
+      }
+    }
+
+    button {
+      padding: 20px 35px;
+      border: solid 1px #000000;
+      border-radius: 4;
+
+      font-size: 2rem;
+    }
+  }
+}

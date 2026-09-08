@@ -1,4 +1,4 @@
-import { Header } from "../../components"
+import { Header, Footer } from "../../components"
 import Hero from "./Hero/Hero"
 import Numbers from "./Numbers/Numbers"
 import Gallery from "./Gallery/Gallery"
@@ -17,5 +17,6 @@ export default function Main() {
     <About />
     <Advantages />
     <Contact />
+    <Footer />
   </>
 }

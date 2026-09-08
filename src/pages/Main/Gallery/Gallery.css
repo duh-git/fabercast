@@ -1,0 +1,70 @@
+.gallery {
+  background: linear-gradient(#1C1C1C -100%, #000000);
+  padding: 110px 80px;
+
+  font-family: "Montserrat Alternates";
+  color: #FFFFFF;
+
+  h2 {
+    position: relative;
+    margin-left: 25px;
+    margin-bottom: 15px;
+
+    font-size: 2rem;
+    letter-spacing: 0.12em;
+    color: #C28A3C;
+    text-transform: lowercase;
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 15px;
+      background-color: #C28A3C;
+      left: -25px;
+      top: 50%;
+    }
+  }
+
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    button {
+      position: relative;
+
+      font-size: 1.6rem;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+
+      span {
+        margin-left: 4px;
+        font-size: 1.8rem;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        height: 2px;
+        width: 100%;
+        background-color: #C28A3C;
+      }
+    }
+
+    &>p {
+      font-family: "Cormorant Garamond";
+      font-size: 7rem;
+    }
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 50px;
+
+  }
+}

@@ -5,6 +5,7 @@ import Gallery from "./Gallery/Gallery"
 import Inspiration from "./Inspiration/Inspiration"
 import About from "./About/About"
 import Advantages from "./Advantages/Advantages"
+import Contact from "./Contact/Contact"
 
 export default function Main() {
   return <>
@@ -15,5 +16,6 @@ export default function Main() {
     <Inspiration />
     <About />
     <Advantages />
+    <Contact />
   </>
 }

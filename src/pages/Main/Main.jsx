@@ -3,6 +3,7 @@ import Hero from "./Hero/Hero"
 import Numbers from "./Numbers/Numbers"
 import Gallery from "./Gallery/Gallery"
 import Inspiration from "./Inspiration/Inspiration"
+import About from "./About/About"
 
 export default function Main() {
   return <>
@@ -11,5 +12,6 @@ export default function Main() {
     <Numbers />
     <Gallery />
     <Inspiration />
+    <About />
   </>
 }

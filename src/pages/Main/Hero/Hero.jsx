@@ -1,4 +1,5 @@
 import "./Hero.css"
+import HeroImage from "/Hero.png"
 
 export default function Hero() {
   return <section className="hero">
@@ -13,6 +14,6 @@ export default function Hero() {
         <button className="catalog">Каталог</button>
       </div>
     </div>
-    <img src="/src/assets/Hero.png" style={{ width: "60vw" }} />
+    <img src={HeroImage} style={{ width: "60vw" }} />
   </section>
 }

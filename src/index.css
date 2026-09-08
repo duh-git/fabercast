@@ -1,3 +1,14 @@
+:root {
+  font-size: 62.5%;
+}
+
+html {
+  /* background-color: ; */
+  /* background: linear-gradient(to right, red, blue); */
+  /* background-image: url("./assets/Hero.png"); */
+}
+
+
 /* Cormorant Garamond */
 @font-face {
   font-family: 'Cormorant Garamond';

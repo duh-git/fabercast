@@ -1,12 +1,8 @@
-import { useState } from 'react'
+import { Main } from "./pages"
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App() {
   return <>
-    <h1>hello world</h1>
+    <Main />
   </>
 }
-
-export default App

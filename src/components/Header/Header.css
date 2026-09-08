@@ -1,0 +1,87 @@
+header {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  transition: background 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 35px 18px 95px;
+
+  font-family: "Geist";
+  color: #ffffff;
+  font-size: 1.6rem;
+
+  .logo-wrapper {
+    z-index: 1000;
+
+    display: flex;
+    gap: 25px;
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    & h2 {
+      /* fabercast */
+      font-family: "Cormorant Garamond";
+      color: #1A1A1A;
+      font-size: 3.2rem;
+    }
+
+    & p {
+      /* мебельная фабрика · 1978 */
+      color: #7A7A7A;
+      letter-spacing: 0.12em;
+      font-size: 0.9rem;
+    }
+  }
+
+  nav {
+    z-index: 1000;
+
+    ul {
+      color: white;
+      font-weight: 300;
+      display: flex;
+      gap: 40px;
+    }
+  }
+
+  .phone-number {
+    z-index: 1000;
+    font-weight: medium;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -60vw;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+
+    background-color: #FFFFFF;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60vw;
+    height: 100%;
+    z-index: -1000;
+
+    background-color: rgba(18, 18, 18, 0.5);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+  }
+}

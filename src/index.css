@@ -1,13 +1,7 @@
 :root {
   font-size: 62.5%;
+  background-color: #FFFFFF;
 }
-
-html {
-  /* background-color: ; */
-  /* background: linear-gradient(to right, red, blue); */
-  /* background-image: url("./assets/Hero.png"); */
-}
-
 
 /* Cormorant Garamond */
 @font-face {
@@ -45,47 +39,60 @@ html {
   font-display: swap;
 }
 
-/* 1. Обычный (Normal) */
 /* Montserrat Alternates */
 @font-face {
   font-family: 'Montserrat Alternates';
-  src: url('MontserratAlternates-Thin.ttf') format('truetype');
+  src: url('/fonts/Montserrat_Alternates/MontserratAlternates-Thin.ttf') format('truetype');
   font-weight: 100;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Montserrat Alternates';
-  src: url('MontserratAlternates-Regular.ttf') format('truetype');
+  src: url('/fonts/Montserrat_Alternates/MontserratAlternates-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Montserrat Alternates';
-  src: url('MontserratAlternates-Medium.ttf') format('truetype');
+  src: url('/fonts/Montserrat_Alternates/MontserratAlternates-Medium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Montserrat Alternates';
-  src: url('MontserratAlternates-Bold.ttf') format('truetype');
+  src: url('/fonts/Montserrat_Alternates/MontserratAlternates-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
 }
 
-/* 2. Курсив (Italic) */
+/* 2. Montserrat Alternates Italic */
 @font-face {
   font-family: 'Montserrat Alternates';
-  src: url('MontserratAlternates-ThinItalic.ttf') format('truetype');
+  src: url('/fonts/Montserrat_Alternates/MontserratAlternates-ThinItalic.ttf') format('truetype');
   font-weight: 100;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Montserrat Alternates';
-  src: url('MontserratAlternates-RegularItalic.ttf') format('truetype');
+  src: url('/fonts/Montserrat_Alternates/MontserratAlternates-Italic.ttf') format('truetype');
   font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Montserrat Alternates';
+  src: url('/fonts/Montserrat_Alternates/MontserratAlternates-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Montserrat Alternates';
+  src: url('/fonts/Montserrat_Alternates/MontserratAlternates-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
   font-style: italic;
 }

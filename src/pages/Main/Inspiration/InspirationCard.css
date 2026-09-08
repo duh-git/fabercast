@@ -1,0 +1,55 @@
+.inspirationCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 25px 35px;
+  border-radius: 10px;
+
+  &::before {
+    content: "";
+    z-index: -100;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #C28A3C;
+    left: -30px;
+    top: -20px;
+    border-radius: 10px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 50%;
+    width: 100%;
+    border-radius: 10px;
+    background: linear-gradient(#ffffff00, #1E1E1E);
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+  }
+
+  p {
+    z-index: 50;
+
+    text-transform: uppercase;
+    color: #C28A3C;
+    font-size: 1.8rem;
+  }
+
+  h3 {
+    z-index: 50;
+
+    font-family: "Cormorant Garamond";
+    font-size: 3.6rem;
+  }
+}

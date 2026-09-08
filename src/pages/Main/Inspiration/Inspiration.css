@@ -1,0 +1,74 @@
+.inspiration {
+  padding: 110px 80px;
+
+  font-family: "Montserrat Alternates";
+  color: #FFFFFF;
+
+  h2 {
+    position: relative;
+    margin-left: 25px;
+    margin-bottom: 15px;
+
+    font-size: 2rem;
+    letter-spacing: 0.12em;
+    color: #C28A3C;
+    text-transform: lowercase;
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 15px;
+      background-color: #C28A3C;
+      left: -25px;
+      top: 50%;
+    }
+  }
+
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    color: #000000;
+
+    button {
+      position: relative;
+
+      font-size: 1.6rem;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+
+      span {
+        margin-left: 4px;
+        font-size: 1.8rem;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        height: 2px;
+        width: 100%;
+        background-color: #C28A3C;
+      }
+    }
+
+    &>p {
+      font-family: "Cormorant Garamond";
+      font-size: 7rem;
+    }
+  }
+
+  ul {
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 600px);
+    grid-template-areas:
+      "img-1 img-1 img-2"
+      "img-3 img-4 img-4";
+    gap: 60px;
+  }
+}

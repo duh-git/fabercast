@@ -1,70 +1,182 @@
 .hero {
   display: flex;
-  padding-left: 110px;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
   background-color: #EAE6DF;
 
-  .hero-message {
+  h1 {
+    margin-top: 80px;
+    padding: 20px;
+    position: relative;
+    margin-bottom: 12px;
+
+    font-family: "Cormorant Garamond";
+    font-size: 4rem;
+    line-height: 1.05;
+
+    span {
+      color: #C28A3C;
+    }
+
+    ::after {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 20px;
+      height: 1px;
+      width: 120px;
+      background-color: #C28A3C;
+    }
+  }
+
+  p {
+    padding: 10px 20px;
+
+    font-family: "Geist";
+    font-size: 1.6rem;
+    line-height: 1.5;
+    color: #7A7A7A;
+  }
+
+  .action {
+    padding: 10px 20px;
+    margin-bottom: 24px;
+
     display: flex;
-    flex-direction: column;
+    gap: 16px;
 
-    h1 {
-      font-family: "Cormorant Garamond";
-      font-size: 7.6rem;
-      line-height: 1.05;
-      position: relative;
+    a {
+      padding: 10px 16px;
+      border-radius: 4px;
 
-      margin-bottom: 48px;
-
-      span {
-        color: #C28A3C;
-      }
-
-      &::after {
-        content: "";
-        position: absolute;
-        bottom: -20px;
-        left: 0;
-        height: 1px;
-        width: 120px;
-        background-color: #C28A3C;
-      }
-    }
-
-    p {
       font-family: "Geist";
-      font-size: 1.6rem;
-      line-height: 1.5;
-      color: #7A7A7A;
-
-      margin-bottom: 20px;
-    }
-
-    .action {
-      display: flex;
-      gap: 16px;
-      font-family: "Geist";
-      font-size: 1.4rem;
+      font-size: 1rem;
       font-weight: medium;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
 
-      a {
-        padding: 18px 32px;
-        border-radius: 4px;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
+    .call {
+      color: #FFFFFF;
+
+      background-color: #C28A3C;
+    }
+
+    .catalog {
+      color: #000000;
+
+      border: #000000 solid 1px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .hero {
+    display: flex;
+    flex-direction: row;
+
+    .hero-message {
+      display: flex;
+      flex-direction: column;
+      width: 40vw;
+
+      h1 {
+        top: 20px;
+        margin: 100px 0 48px 10%;
+        padding: 0;
+        font-size: 4rem;
+
+        ::after {
+          left: 0;
+          bottom: -20px;
+        }
       }
 
-      .call {
-        color: #FFFFFF;
+      p {
+        margin-bottom: 20px;
+        margin-left: 10%;
+        padding: 0;
+        text-wrap: balance;
 
-        background-color: #C28A3C;
+        font-size: 1rem;
       }
 
-      .catalog {
-        color: #000000;
+      .action {
+        padding: 0;
+        margin-left: 10%;
+      }
+    }
 
-        border: #000000 solid 1px;
+    img {
+      width: 60vw;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    .hero-message {
+      h1 {
+        top: 0;
+        margin: 0 auto 45px 15%;
+        font-size: 5.5rem;
+
+        ::after {
+          left: 0;
+          bottom: -20px;
+        }
+      }
+
+      p {
+        margin-bottom: 20px;
+        margin-left: 15%;
+        padding: 0;
+        text-wrap: balance;
+
+        font-size: 1.6rem;
+      }
+
+      .action {
+        padding: 0;
+        margin-left: 15%;
+
+        a {
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .hero {
+    .hero-message {
+      h1 {
+        top: 0;
+        font-size: 6.7rem;
+
+        ::after {
+          left: 0;
+          bottom: -20px;
+        }
+      }
+
+      p {
+        margin-bottom: 30px;
+        margin-left: 15%;
+        padding: 0;
+        text-wrap: balance;
+
+        font-size: 1.8rem;
+      }
+
+      .action {
+        padding: 0;
+        margin-left: 15%;
+
+        a {
+          font-size: 1.8rem;
+        }
       }
     }
   }

@@ -1,88 +1,299 @@
+/* Базовые стили */
 header {
   position: fixed;
+  top: 0;
+  left: 0;
   z-index: 1000;
   width: 100%;
-  transition: background 0.3s ease;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 18px 95px 18px;
-
-  font-family: "Geist";
+  padding: 18px 95px;
+  font-family: "Geist", sans-serif;
   color: #ffffff;
   font-size: 1.6rem;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
 
-  .logo-wrapper {
-    z-index: 1000;
+/* Фоновый слой (белый слева) */
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -60vw;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background-color: #ffffff;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
 
-    display: flex;
-    gap: 25px;
+/* Прозрачный слой справа */
+header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60vw;
+  height: 100%;
+  z-index: -1000;
+  background-color: rgba(18, 18, 18, 0.5);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
 
-    .logo-text {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
+/* Логотип */
+.logo-wrapper {
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  text-decoration: none;
+}
 
-    & h2 {
-      /* fabercast */
-      font-family: "Cormorant Garamond";
-      color: #1A1A1A;
-      font-size: 3.2rem;
-    }
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
-    & p {
-      /* мебельная фабрика · 1978 */
-      color: #7A7A7A;
-      letter-spacing: 0.12em;
-      font-size: 0.9rem;
-    }
+.logo-text h2 {
+  font-family: "Cormorant Garamond", serif;
+  color: #1a1a1a;
+  font-size: 3.2rem;
+  margin: 0;
+  line-height: 1;
+}
+
+.logo-text p {
+  color: #7a7a7a;
+  letter-spacing: 0.12em;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Навигация */
+nav {
+  z-index: 1000;
+  margin-left: 100px;
+}
+
+nav ul {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul a {
+  color: white;
+  font-weight: 300;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+nav ul a:hover {
+  color: #ffd700;
+}
+
+/* Телефон */
+.phone-number {
+  z-index: 1000;
+  font-weight: 500;
+  color: white;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* Бургер (скрыт на десктопе) */
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1100;
+  padding: 5px;
+}
+
+.burger span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background: #1a1a1a;
+  border-radius: 2px;
+  transition: 0.3s ease;
+}
+
+/* Анимация бургера в крестик */
+header.open .burger span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+  width: 39px;
+  background: #fff;
+}
+
+header.open .burger span:nth-child(2) {
+  opacity: 0;
+}
+
+header.open .burger span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+  width: 39px;
+  background: #fff;
+}
+
+/* ===== МОБИЛЬНАЯ ВЕРСИЯ ===== */
+@media (max-width: 1024px) {
+  header {
+    padding: 10px 30px;
   }
 
   nav {
-    z-index: 1000;
-    margin-left: 100px;
+    margin-left: 50px;
+  }
 
-    ul {
-      color: white;
-      font-weight: 300;
-      display: flex;
-      gap: 40px;
-    }
+  nav ul {
+    gap: 12px;
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 767px) {
+  header {
+    padding: 12px 20px;
+    background: white;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  }
+
+  /* Убираем декоративные псевдоэлементы на мобилке */
+  header::before,
+  header::after {
+    display: none;
+  }
+
+  /* Логотип */
+  .logo-wrapper img {
+    height: 56px !important;
+  }
+
+  .logo-text h2 {
+    font-size: 2.4rem;
+  }
+
+  .logo-text p {
+    font-size: 0.75rem;
+  }
+
+  /* Телефон */
+  .phone-number {
+    font-size: 1.4rem;
+    color: #1a1a1a;
+  }
+
+  /* Бургер показываем */
+  .burger {
+    display: flex;
+  }
+
+  /* Навигация — выезжающее меню */
+  nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 75%;
+    max-width: 320px;
+    height: 100vh;
+    margin: 0;
+    padding: 80px 30px 40px;
+    background: #1a1a1a;
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.3);
+    transition: right 0.4s ease;
+    z-index: 1050;
+    overflow-y: auto;
+  }
+
+  nav.open {
+    right: 0;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  nav ul a {
+    font-size: 2rem;
+    color: #fff;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: block;
+  }
+
+  nav ul a:hover {
+    color: #ffd700;
+  }
+
+  /* Затемнение фона при открытом меню */
+  header.open::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1040;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    display: block;
+  }
+
+  /* Скрываем старый псевдоэлемент */
+  header.open::after {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 10px 16px;
+  }
+
+  .logo-wrapper {
+    gap: 14px;
+  }
+
+  .logo-wrapper img {
+    height: 44px !important;
+  }
+
+  .logo-text h2 {
+    font-size: 2rem;
+  }
+
+  .logo-text p {
+    font-size: 0.65rem;
   }
 
   .phone-number {
-    z-index: 1000;
-    font-weight: medium;
+    font-size: 1.2rem;
   }
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -60vw;
-    width: 100%;
-    height: 100%;
-    z-index: 100;
-
-    background-color: #FFFFFF;
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
+  .burger span {
+    width: 24px;
+    height: 2.5px;
   }
 
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 60vw;
-    height: 100%;
-    z-index: -1000;
+  nav {
+    padding: 70px 20px 30px;
+    width: 85%;
+  }
 
-    background-color: rgba(18, 18, 18, 0.5);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
+  nav ul a {
+    font-size: 1.6rem;
   }
 }

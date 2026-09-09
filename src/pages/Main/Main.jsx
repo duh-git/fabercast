@@ -12,10 +12,10 @@ export default function Main() {
     <Hero />
     <Numbers />
     <Gallery />
-    <Inspiration />
-    <About />
-    <Advantages />
-    <Contact />
-    <Footer />
+    {/* <Inspiration /> */}
+    {/* <About /> */}
+    {/* <Advantages /> */}
+    {/* <Contact /> */}
+    {/* <Footer /> */}
   </>
 }

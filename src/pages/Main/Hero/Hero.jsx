@@ -14,6 +14,6 @@ export default function Hero() {
         <a href="/catalog" className="catalog">Каталог</a>
       </div>
     </div>
-    <img src={HeroImage} style={{ width: "60vw" }} />
+    <img src={HeroImage} />
   </section>
 }

@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Main, Catalog } from "./pages";
+import { Main, Catalog, Product } from "./pages";
 import { Header } from "./components";
 import './App.css';
 
@@ -9,6 +9,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/catalog" element={<Catalog />} />
+        <Route path="/product/example" element={<Product />} />
       </Routes>
     </BrowserRouter>
   );

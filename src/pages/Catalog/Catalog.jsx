@@ -1,35 +1,84 @@
 import { Header, Contact, Footer } from "../../components"
 import "./Catalog.css"
 
-const mockData = {
-  allAmount: 4,
-  categories:
-    [
-      { name: "Столы", amount: 1 },
-      { name: "Стулья", amount: 2 },
-      { name: "Комоды", amount: 1 },
-      { name: "Освещение", amount: 0 }
-    ],
-  products: [
-    { category: "Стол", name: "Стол “Nordic”", materials: ["Массив ореха", "Кожа", "Латунь"], price: 799 },
-    { category: "Стул", name: "Стул “Nordic”", materials: ["Ткань букле", "Массив дуба"], price: 399 },
-    { category: "Комод", name: "Комод “Geometry”", materials: ["Массив ореха", "Кожа", "Латунь"], price: 999 },
-    { category: "Комод", name: "Тумба “Art Faces”", materials: ["Керамика", "Дерево", "Металл"], price: 999 },
-  ]
-}
-
 export default function Catalog() {
   return <>
     <Header />
     <section className="catalog">
       <h1>Каталог</h1>
-      <ul>
-        {
-          mockData.categories.map((category) => {
-            <li key={category.name}>{category.name} ({category.amount})</li>
-          })
-        }
+      <nav>
+        <ul>
+          <li>Все (4)</li>
+          <li>Столы (1)</li>
+          <li>Стулья (2)</li>
+          <li>Комоды (1)</li>
+          <li>Освещение (0)</li>
+        </ul>
+        <div className="search">
+          <img src="/src/assets/search.svg" alt="search" />
+          <input id="search-input" type="text" placeholder="Поиск по каталогу..." />
+        </div>
+      </nav>
+      <ul className="catalogList">
+        <li>
+          <div>
+            <img src="/catalog-1.png" alt="" />
+            <p className="catcoll">СТОЛ • КОЛЛЕКЦИЯ</p>
+            <h2 className="name">Стол “Nordic”</h2>
+          </div>
+          <p className="category">Столы</p>
+          <p className="material">Массив ореха, кожа, латунь</p>
+          <p className="price">999 $</p>
+          <div className="">
+            <a href="">Подробнее</a>
+            <button>Оставить заявку</button>
+          </div>
+        </li>
+        <li>
+          <div>
+            <img src="/catalog-2.png" alt="" />
+            <p className="catcoll">КОМОД • КОЛЛЕКЦИЯ</p>
+            <h2 className="name">Комод “Geometry”</h2>
+          </div>
+          <p className="category">Комоды</p>
+          <p className="material">Массив дуба, латунь, лак</p>
+          <p className="price">999 $</p>
+          <div className="">
+            <a href="">Подробнее</a>
+            <button>Оставить заявку</button>
+          </div>
+        </li>
+        <li>
+          <div>
+            <img src="/catalog-3.png" alt="" />
+            <p className="catcoll">БУФЕТ • АРТ</p>
+            <h2 className="name">Тумба “Art Faces”</h2>
+          </div>
+          <p className="category">Комоды</p>
+          <p className="material">Керамика, дерево, металл</p>
+          <p className="price">999 $</p>
+          <div className="">
+            <a href="">Подробнее</a>
+            <button>Оставить заявку</button>
+          </div>
+        </li>
+        <li>
+          <div>
+            <img src="/catalog-4.png" alt="" />
+            <p className="catcoll">СТУЛ • ПРЕМИУМ</p>
+            <h2 className="name">Стул “Rein”</h2>
+          </div>
+          <p className="category">Стулья</p>
+          <p className="material">Ткань букле, массив дуба</p>
+          <p className="price">999 $</p>
+          <div className="">
+            <a href="">Подробнее</a>
+            <button>Оставить заявку</button>
+          </div>
+        </li>
       </ul>
+      <div className="pagintaion">
+      </div>
     </section>
     <Contact />
     <Footer />

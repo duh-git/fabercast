@@ -26,12 +26,14 @@ export default function Catalog() {
             <p className="catcoll">СТОЛ • КОЛЛЕКЦИЯ</p>
             <h2 className="name">Стол “Nordic”</h2>
           </div>
-          <p className="category">Столы</p>
-          <p className="material">Массив ореха, кожа, латунь</p>
-          <p className="price">999 $</p>
-          <div className="">
-            <a href="">Подробнее</a>
-            <button>Оставить заявку</button>
+          <div className="cardInfo">
+            <p className="category">Столы</p>
+            <p className="material">Массив ореха, кожа, латунь</p>
+            <p className="price">999 $</p>
+            <div className="action">
+              <a href="">Подробнее</a>
+              <button>Оставить заявку</button>
+            </div>
           </div>
         </li>
         <li>
@@ -40,12 +42,14 @@ export default function Catalog() {
             <p className="catcoll">КОМОД • КОЛЛЕКЦИЯ</p>
             <h2 className="name">Комод “Geometry”</h2>
           </div>
-          <p className="category">Комоды</p>
-          <p className="material">Массив дуба, латунь, лак</p>
-          <p className="price">999 $</p>
-          <div className="">
-            <a href="">Подробнее</a>
-            <button>Оставить заявку</button>
+          <div className="cardInfo">
+            <p className="category">Комоды</p>
+            <p className="material">Массив дуба, латунь, лак</p>
+            <p className="price">999 $</p>
+            <div className="action">
+              <a href="">Подробнее</a>
+              <button>Оставить заявку</button>
+            </div>
           </div>
         </li>
         <li>
@@ -54,12 +58,14 @@ export default function Catalog() {
             <p className="catcoll">БУФЕТ • АРТ</p>
             <h2 className="name">Тумба “Art Faces”</h2>
           </div>
-          <p className="category">Комоды</p>
-          <p className="material">Керамика, дерево, металл</p>
-          <p className="price">999 $</p>
-          <div className="">
-            <a href="">Подробнее</a>
-            <button>Оставить заявку</button>
+          <div className="cardInfo">
+            <p className="category">Комоды</p>
+            <p className="material">Керамика, дерево, металл</p>
+            <p className="price">999 $</p>
+            <div className="action">
+              <a href="">Подробнее</a>
+              <button>Оставить заявку</button>
+            </div>
           </div>
         </li>
         <li>
@@ -68,16 +74,27 @@ export default function Catalog() {
             <p className="catcoll">СТУЛ • ПРЕМИУМ</p>
             <h2 className="name">Стул “Rein”</h2>
           </div>
-          <p className="category">Стулья</p>
-          <p className="material">Ткань букле, массив дуба</p>
-          <p className="price">999 $</p>
-          <div className="">
-            <a href="">Подробнее</a>
-            <button>Оставить заявку</button>
+          <div className="cardInfo">
+            <p className="category">Стулья</p>
+            <p className="material">Ткань букле, массив дуба</p>
+            <p className="price">999 $</p>
+            <div className="action">
+              <a href="">Подробнее</a>
+              <button>Оставить заявку</button>
+            </div>
           </div>
         </li>
       </ul>
       <div className="pagintaion">
+        <div className="allSet">
+          <p>1</p>
+          <p>4</p>
+        </div>
+        <ul className="pages">
+          <li className="current">1</li>
+          <li>2</li>
+          <li>3</li>
+        </ul>
       </div>
     </section>
     <Contact />

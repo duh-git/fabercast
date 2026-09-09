@@ -1,6 +1,12 @@
 .gallery {
+  /* padding: 110px 80px; */
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  /* overflow: hidden; */
+
   background: linear-gradient(#1C1C1C -100%, #000000);
-  padding: 110px 80px;
 
   font-family: "Montserrat Alternates";
   color: #FFFFFF;
@@ -15,7 +21,7 @@
     color: #C28A3C;
     text-transform: lowercase;
 
-    &::before {
+    &::after {
       content: "";
       position: absolute;
       height: 2px;
@@ -27,14 +33,22 @@
   }
 
   .wrapper {
-    display: flex;
+    display: contents;
+    /* display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; */
+
+    p {
+      font-family: "Cormorant Garamond";
+      font-size: 4rem;
+    }
 
     a {
+      margin: 35px 0;
       position: relative;
+      align-self: flex-end;
 
-      font-size: 1.6rem;
+      font-size: 1.4rem;
       font-weight: 400;
       letter-spacing: 0.12em;
 
@@ -53,18 +67,65 @@
         background-color: #C28A3C;
       }
     }
-
-    &>p {
-      font-family: "Cormorant Garamond";
-      font-size: 7rem;
-    }
   }
 
-  ul {
+  /* ul {
     display: flex;
     justify-content: space-between;
     gap: 30px;
     margin-top: 50px;
+  } */
 
+  .gallerySwiper {
+    padding: 0 60px 18px 35px;
+    width: 100% !important;
+    mask-image: linear-gradient(to right, transparent 0%, black 5% 95%, #00000000 100%);
+
+
+    .swiper-pagination {
+      position: relative;
+      bottom: -15px;
+    }
+
+    .swiper-pagination-bullet {
+      background-color: #C28A3C;
+    }
+  }
+}
+
+@media (min-width: 425px) {
+  .gallery {
+    h2 {
+      left: 20px;
+    }
+
+    .wrapper {
+      padding: 0 20px;
+      margin-bottom: 25px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .gallery {
+    h2 {
+      left: 40px;
+    }
+
+    .wrapper {
+      padding: 0 40px;
+      margin-bottom: 25px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .gallerySwiper {
+      padding: 35px;
+
+    }
   }
 }

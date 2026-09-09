@@ -1,48 +1,56 @@
 .galleryCard {
-  background-color: #1A1715;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background-color: #1A1715;
 
   p {
+    /* margin: 25px auto 10px 25px; */
     margin: 25px auto 10px 25px;
     text-transform: lowercase;
 
     color: #C28A3C;
-    font-size: 1.8rem;
+    /* font-size: 1.8rem; */
+    font-size: 1rem;
   }
 
   h3 {
     margin-left: 25px;
 
     font-family: "Cormorant Garamond";
-    font-size: 2.4rem;
+    /* font-size: 2.4rem; */
+    font-size: 1.6rem;
   }
 
   .gallery-card-action {
-    margin: 25px 20px 15px;
+    margin: 15px;
+    margin-left: 25px;
+    /* margin: 25px 20px 15px; */
     display: flex;
     gap: 10px;
     justify-content: space-between;
 
-    font-size: 1.6rem;
+    /* font-size: 1.6rem; */
+    font-size: 1rem;
   }
 
   .gallery-card-action button:nth-child(1) {
     /* Подробнее */
     text-transform: uppercase;
-    width: 72%;
-    padding: 12px;
+    /* width: 70%; */
+    flex: 3;
+    /* padding: 12px; */
+    padding: 8px;
     border: 1px solid #D9D9D9;
     border-radius: 5px;
   }
 
   .gallery-card-action button:nth-child(2) {
     /* Цена */
-    width: 22%;
+    /* width: 22%; */
+    flex: 1.25;
     color: #000000;
     background-color: #C28A3C;
     border-radius: 5px;
   }
-
 }

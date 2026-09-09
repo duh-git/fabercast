@@ -1,5 +1,10 @@
 import GalleryCard from "./GalleryCard"
 import "./Gallery.css"
+// Swiper
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import { Pagination } from 'swiper/modules';
 
 const mockData = [
   { image: "./gallery-1.png", category: "Комоды", name: "Комод “Geometry”", link: "a", price: 999 },
@@ -12,15 +17,44 @@ export default function Gallery() {
   return <section id="gallery" className="gallery">
     <h2>Галерея</h2>
     <div className="wrapper">
-      <p>Избранные позиции</p>
+      <p>Избранные <br /> позиции</p>
       <a href="/catalog">Весь каталог <span>→</span></a>
     </div>
-    <ul>
+    <Swiper
+      // spaceBetween={25}
+      breakpoints={{
+        320: {
+          spaceBetween: 15,
+        },
+        425: {
+          spaceBetween: 30,
+        },
+        550: {
+          slidesPerView: 2,
+          spaceBetween: 30,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 30,
+        },
+      }}
+      pagination={{
+        dynamicBullets: true,
+      }}
+      modules={[Pagination]}
+      className="gallerySwiper"
+    >
       {
         mockData.map((cardData) => {
-          return <GalleryCard key={cardData.link} {...cardData} />
+          return <SwiperSlide>
+            <GalleryCard key={cardData.link} {...cardData} />
+          </SwiperSlide>
         })
       }
-    </ul>
-  </section>
+    </Swiper>
+  </section >
 }

@@ -41,9 +41,10 @@
   p {
     z-index: 50;
 
+    font-family: "Montserrat";
+    font-size: 1.8rem;
     text-transform: uppercase;
     color: #C28A3C;
-    font-size: 1.8rem;
   }
 
   h3 {

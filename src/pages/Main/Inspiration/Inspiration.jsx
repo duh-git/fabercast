@@ -1,4 +1,3 @@
-import InspirationCard from "./InspirationCard"
 import "./Inspiration.css"
 
 const mockData = [
@@ -13,12 +12,19 @@ export default function Inspiration() {
     <h2>Портфолио</h2>
     <div className="wrapper">
       <p>Работы, <br /> вдохновляющие нас</p>
-      <button>Все работы <span>→</span></button>
+      <a href="#">Все работы <span>→</span></a>
     </div>
     <ul>
       {
-        mockData.map((cardData) => {
-          return <InspirationCard key={cardData.link} {...cardData} />
+        mockData.map((card) => {
+          return <li
+            key={card.name}
+            href={card.link}
+          >
+            <img src={card.image} alt={card.name} />
+            <p>{card.category} · {card.city}</p>
+            <h3>{card.name}</h3>
+          </li >
         })
       }
     </ul>

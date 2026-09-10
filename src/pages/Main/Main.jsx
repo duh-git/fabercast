@@ -12,7 +12,7 @@ export default function Main() {
     <Hero />
     <Numbers />
     <Gallery />
-    {/* <Inspiration /> */}
+    <Inspiration />
     <About />
     <Advantages />
     <Contact />

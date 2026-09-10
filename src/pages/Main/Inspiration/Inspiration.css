@@ -1,5 +1,8 @@
 .inspiration {
-  padding: 110px 80px;
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
 
   font-family: "Montserrat Alternates";
   color: #FFFFFF;
@@ -14,7 +17,7 @@
     color: #C28A3C;
     text-transform: lowercase;
 
-    &::before {
+    &::after {
       content: "";
       position: absolute;
       height: 2px;
@@ -26,16 +29,19 @@
   }
 
   .wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: contents;
+    color: #000;
 
-    color: #000000;
+    p {
+      font-family: "Cormorant Garamond";
+      font-size: 3.4rem;
+    }
 
-    button {
+    a {
+      margin: 35px 0;
       position: relative;
 
-      font-size: 1.6rem;
+      font-size: 1.4rem;
       font-weight: 400;
       letter-spacing: 0.12em;
 
@@ -54,21 +60,193 @@
         background-color: #C28A3C;
       }
     }
-
-    &>p {
-      font-family: "Cormorant Garamond";
-      font-size: 7rem;
-    }
   }
 
   ul {
-    margin-top: 80px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 600px);
-    grid-template-areas:
-      "img-1 img-1 img-2"
-      "img-3 img-4 img-4";
-    gap: 60px;
+    grid-template-columns: 1fr;
+    width: 100%;
+    gap: 30px;
+
+    li {
+      position: relative;
+      margin-bottom: 25px;
+      padding: 15px 10px;
+      height: 320px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+
+      border-radius: 10px;
+
+      img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        border-radius: 10px;
+        object-fit: cover;
+        z-index: -10;
+      }
+
+      p {
+        z-index: 50;
+
+        font-family: "Montserrat";
+        font-size: 1.8rem;
+        font-size: 1rem;
+        text-transform: uppercase;
+        color: #C28A3C;
+      }
+
+      h3 {
+        z-index: 50;
+
+        font-family: "Cormorant Garamond";
+        font-size: 3.6rem;
+        font-size: 2rem;
+      }
+
+      &::before {
+        content: "";
+        z-index: -100;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        border: 1px solid #C28A3C;
+        left: -8px;
+        top: -14px;
+        border-radius: 10px;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 50%;
+        width: 100%;
+        border-radius: 10px;
+        background: linear-gradient(#ffffff00, #1E1E1E);
+      }
+    }
+  }
+}
+
+@media (min-width: 425px) {
+  .inspiration {
+
+    .wrapper {
+      padding: 0 20px;
+      margin-bottom: 25px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      p {
+        font-size: 3rem;
+      }
+
+      a {
+        font-size: 1rem;
+      }
+    }
+
+    ul {
+      li {
+        p {
+          font-size: 1.4rem;
+        }
+
+        h3 {
+          font-size: 3rem;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .inspiration {
+    padding: 50px 60px;
+
+    .wrapper {
+      p {
+        font-size: 5rem;
+      }
+
+      a {
+        font-size: 1.6rem;
+      }
+    }
+
+    ul {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, auto);
+      grid-template-areas:
+        "img-1 img-1 img-2"
+        "img-3 img-4 img-4";
+
+      li {
+        p {
+          font-size: 1.4rem;
+        }
+
+        h3 {
+          font-size: 3rem;
+        }
+      }
+
+      li:nth-child(1) {
+
+        grid-area: img-1;
+      }
+
+      li:nth-child(2) {
+        grid-area: img-2;
+      }
+
+      li:nth-child(3) {
+        grid-area: img-3;
+      }
+
+      li:nth-child(4) {
+        grid-area: img-4;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .inspiration {
+    padding: 50px 5%;
+
+    .wrapper {
+      p {
+        font-size: 7rem;
+      }
+
+      a {
+        font-size: 2rem;
+      }
+    }
+
+    ul {
+      li {
+        height: 500px;
+        padding: 30px;
+
+        p {
+          font-size: 2rem;
+        }
+
+        h3 {
+          font-size: 5rem;
+        }
+      }
+    }
   }
 }

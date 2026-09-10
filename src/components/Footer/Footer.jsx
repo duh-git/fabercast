@@ -19,9 +19,9 @@ export default function Footer() {
       <li><a href="/#contacts">Контакты</a></li>
     </ul>
     <ul className="footer__contact">
-      <li><a href="tel:+74956666666">+7 (499) 666-66-66</a></li>
-      <li>г. Москва, ул. 8 марта, <br /> ТЦ “Яркость” 2-й этаж</li>
-      <li className="leave-request"><a href="tel:+74956666666">Оставить заявку</a></li>
+      <li><a href="tel:+89618205070">+7 (499) 666-66-66</a></li>
+      <li>РСО-Алания, г. Владикавказ, <br /> ул. Алагирская, д. 5, пом. 4</li>
+      <li className="leave-request"><a href="tel:+89618205070">Оставить заявку</a></li>
     </ul>
     <ul className="footer__social">
       <li><a href=""><img src="/src/assets/instagram.svg" alt="" /></a></li>
@@ -29,7 +29,7 @@ export default function Footer() {
       <li><a href=""><img src="/src/assets/pinterest.svg" alt="" /></a></li>
     </ul>
     <div className="footer__copyright">
-      <p>Мебельная фабрика · 1978</p>
+      <p>ООО "Владикавказская Мебельная Фабрика"</p>
       <p>@2026 FABERCAST. ВСЕ ПРАВА ЗАЩИЩЕНЫ</p>
     </div>
   </footer>

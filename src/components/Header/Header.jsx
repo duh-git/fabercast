@@ -25,8 +25,8 @@ export default function Header() {
         </ul>
       </nav>
 
-      <a className="phone-number" href="tel:+74956666666">
-        +7 (495) 666-66-66
+      <a className="phone-number" href="tel:+89618205070">
+        +7 (961) 820-50-70
       </a>
 
       <button

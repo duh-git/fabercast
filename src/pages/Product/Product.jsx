@@ -115,7 +115,7 @@ export default function Product() {
       <div className="action">
         <p>{price} $</p>
         <button><img src="/src/assets/cart.svg" alt="" /></button>
-        <a href="tel:+74956666666">Оставить заявку</a>
+        <a href="tel:+89618205070">Оставить заявку</a>
       </div>
     </section >
     <Footer />

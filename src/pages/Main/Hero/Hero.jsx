@@ -10,7 +10,7 @@ export default function Hero() {
       </h1>
       <p>От создания проекта до идеального интерьера в вашем доме</p>
       <div className="action">
-        <a href="tel:+74956666666" className="call">Позвонить нам</a>
+        <a href="tel:+89618205070" className="call">Позвонить нам</a>
         <a href="/catalog" className="catalog">Каталог</a>
       </div>
     </div>

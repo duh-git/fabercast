@@ -32,7 +32,7 @@ export default function Catalog() {
             <p className="material">Массив ореха, кожа, латунь</p>
             <p className="price">999 $</p>
             <div className="action">
-              <a href="">Подробнее</a>
+              <a href="/product/example">Подробнее</a>
               <button>Оставить заявку</button>
             </div>
           </div>
@@ -48,7 +48,7 @@ export default function Catalog() {
             <p className="material">Массив дуба, латунь, лак</p>
             <p className="price">999 $</p>
             <div className="action">
-              <a href="">Подробнее</a>
+              <a href="/product/example">Подробнее</a>
               <button>Оставить заявку</button>
             </div>
           </div>
@@ -64,7 +64,7 @@ export default function Catalog() {
             <p className="material">Керамика, дерево, металл</p>
             <p className="price">999 $</p>
             <div className="action">
-              <a href="">Подробнее</a>
+              <a href="/product/example">Подробнее</a>
               <button>Оставить заявку</button>
             </div>
           </div>
@@ -80,7 +80,7 @@ export default function Catalog() {
             <p className="material">Ткань букле, массив дуба</p>
             <p className="price">999 $</p>
             <div className="action">
-              <a href="">Подробнее</a>
+              <a href="/product/example">Подробнее</a>
               <button>Оставить заявку</button>
             </div>
           </div>

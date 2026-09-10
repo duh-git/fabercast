@@ -3,7 +3,7 @@ import AboutImage from "/About.png"
 
 export default function About() {
   return <section id="about" className="about">
-    <div className="about-image-wrapper">
+    <div className="about-image">
       <img src={AboutImage} />
       <p><span>46</span> <br />лет опыта</p>
     </div>
@@ -22,5 +22,6 @@ export default function About() {
         Гарантия на все изделия — 25 лет.
       </p>
     </div>
+    <hr />
   </section>
 }

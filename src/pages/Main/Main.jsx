@@ -13,7 +13,7 @@ export default function Main() {
     <Numbers />
     <Gallery />
     {/* <Inspiration /> */}
-    {/* <About /> */}
+    <About />
     {/* <Advantages /> */}
     {/* <Contact /> */}
     {/* <Footer /> */}

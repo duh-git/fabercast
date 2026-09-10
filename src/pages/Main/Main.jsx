@@ -15,7 +15,7 @@ export default function Main() {
     {/* <Inspiration /> */}
     <About />
     <Advantages />
-    {/* <Contact /> */}
+    <Contact />
     {/* <Footer /> */}
   </>
 }

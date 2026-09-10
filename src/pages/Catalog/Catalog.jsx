@@ -8,7 +8,7 @@ export default function Catalog() {
       <h1>Каталог</h1>
       <nav>
         <ul>
-          <li>Все (4)</li>
+          <li className="active">Все (4)</li>
           <li>Столы (1)</li>
           <li>Стулья (2)</li>
           <li>Комоды (1)</li>
@@ -19,6 +19,7 @@ export default function Catalog() {
           <input id="search-input" type="text" placeholder="Поиск по каталогу..." />
         </div>
       </nav>
+      <hr />
       <ul className="catalogList">
         <li>
           <div>
@@ -86,15 +87,13 @@ export default function Catalog() {
         </li>
       </ul>
       <div className="pagintaion">
-        <div className="allSet">
-          <p>1</p>
-          <p>4</p>
-        </div>
+        <p className="start">1</p>
         <ul className="pages">
           <li className="current">1</li>
           <li>2</li>
           <li>3</li>
         </ul>
+        <p className="end">4</p>
       </div>
     </section>
     <Contact />

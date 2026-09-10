@@ -16,6 +16,6 @@ export default function Main() {
     <About />
     <Advantages />
     <Contact />
-    {/* <Footer /> */}
+    <Footer />
   </>
 }

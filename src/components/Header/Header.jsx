@@ -8,7 +8,7 @@ export default function Header() {
 
   return (
     <header className={isOpen ? "open" : ""}>
-      <a href="/" className="logo-wrapper">
+      <a href="/#" className="logo-wrapper">
         <img src={logo} style={{ height: 80 }} alt="Fabercast logo" />
         <div className="logo-text">
           <h2>fabercast</h2>

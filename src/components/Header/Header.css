@@ -96,7 +96,7 @@ nav ul a {
 }
 
 nav ul a:hover {
-  color: #ffd700;
+  color: #C28A3C;
 }
 
 /* Телефон */
@@ -234,7 +234,7 @@ header.open .burger span:nth-child(3) {
   }
 
   nav ul a:hover {
-    color: #ffd700;
+    color: #C28A3C;
   }
 
   /* Затемнение фона при открытом меню */

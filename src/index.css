@@ -3,6 +3,11 @@
   background-color: #FFFFFF;
 }
 
+html {
+  scroll-padding-top: 116px;
+  scroll-behavior: smooth;
+}
+
 /* Cormorant Garamond */
 @font-face {
   font-family: 'Cormorant Garamond';

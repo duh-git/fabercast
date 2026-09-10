@@ -14,7 +14,7 @@ export default function Main() {
     <Gallery />
     {/* <Inspiration /> */}
     <About />
-    {/* <Advantages /> */}
+    <Advantages />
     {/* <Contact /> */}
     {/* <Footer /> */}
   </>

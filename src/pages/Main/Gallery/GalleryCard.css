@@ -34,9 +34,10 @@
     font-size: 1rem;
   }
 
-  .gallery-card-action button:nth-child(1) {
+  .gallery-card-action a:nth-child(1) {
     /* Подробнее */
     text-transform: uppercase;
+    text-align: center;
     /* width: 70%; */
     flex: 3;
     /* padding: 12px; */

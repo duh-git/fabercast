@@ -20,9 +20,9 @@ const mockData = {
     "/product-5.png",
   ],
   colorPalette: [
-    { name: "Темно - зеленый", img: "/green.png" },
-    { name: "Натуральный орех", img: "/natural-nut.png" },
-    { name: "Матовая латунь", img: "/brass.png" },
+    { name: "Темно - зеленый", desc: "Тёплая фактура дерева", img: "/green.png" },
+    { name: "Натуральный орех", desc: "Элегантный глубокий тон", img: "/natural-nut.png" },
+    { name: "Матовая латунь", desc: "Деликатный благородный акцент", img: "/brass.png" },
   ],
   asideInfo: [
     { title: "Натуральный шпон", desc: "Тёплая фактура натурального ореха.", img: "/src/assets/aside-1.svg" },
@@ -41,51 +41,25 @@ export default function Product() {
       <nav>
         <a href="/catalog">Каталог</a>
         <a href="/product/example">Комоды</a>
-        <a href="/product/example">{name}</a>
-        <a href="/catalog"><span className="arrow">←</span> Назад к каталогу</a>
+        <a href="/product/example" className="name">{name}</a>
+        <a href="/catalog" className="back"><span className="arrow">←</span> Назад</a>
       </nav>
-      <div className="first">
-        <div className="pictures">
-          <img className="main" src={images[0]} alt="" />
-          <ul>
-            {
-              images.slice(0, 5).map((img) => {
-                return <li key={img}><img src={img} /></li>
-              })
-            }
-          </ul>
-        </div>
-        <div className="description">
-          <h2>{category}</h2>
-          <h1>{name}</h1>
-          <p className="description-text">{description}</p>
-          <p>Цветовая палитра</p>
-          <ul className="colorPalette">
-            {
-              colorPalette.map((color) => {
-                return <li key={color.name}>
-                  <img src={color.img} alt={name} />
-                  <p>{color.name}</p>
-                </li>
-              })
-            }
-          </ul>
-        </div>
-        <ul className="aside-info">
-          {
-            asideInfo.map((info, index) => {
-              const isLast = index === asideInfo.length - 1;
-              return <li>
-                <img src={info.img} />
-                <h3>{info.title}</h3>
-                <p>{info.desc}</p>
-                {!isLast && <hr />}
-              </li>
-            })
-          }
-        </ul>
+
+      <div className="title">
+        <h2>{category}</h2>
+        <h1>{name}</h1>
       </div>
-      <div className="second">
+      <ul className="pictures">
+        <li className="main"><img src={images[0]} alt="" /></li>
+        {
+          images.slice(0, 5).map((img) => {
+            return <li key={img}><img src={img} /></li>
+          })
+        }
+      </ul>
+      <p className="description">{description}</p>
+      <div className="params">
+        <h2>Размеры</h2>
         <dl>
           <div>
             <dt>Высота</dt>
@@ -102,14 +76,48 @@ export default function Product() {
             <dd>{params.depth} мм</dd>
           </div>
         </dl>
-        <img src={params.image} alt="" />
-        <div className="action">
-          <p>{price} $</p>
-          <button><img src="/src/assets/cart.svg" alt="" /></button>
-          <a href="tel:+74956666666">Оставить заявку</a>
-        </div>
       </div>
-    </section>
+      <img className="scheme" src={params.image} alt="" />
+      <div className="colorPalette">
+        <h2>Цветовая палитра</h2>
+        <ul>
+          {
+            colorPalette.map((color) => {
+              return <li key={color.name}>
+                <img src={color.img} alt={name} />
+                <div>
+                  <h3>{color.name}</h3>
+                  <p>{color.desc}</p>
+                </div>
+              </li>
+            })
+          }
+        </ul>
+      </div>
+      <div className="peculiarities">
+        <h2>Особенности изделия</h2>
+        <ul className="peculiarities">
+          {
+            asideInfo.map((info, index) => {
+              const isLast = index === asideInfo.length - 1;
+              return <li key={info.img}>
+                <img src={info.img} />
+                <div>
+                  <h3>{info.title}</h3>
+                  <p>{info.desc}</p>
+                </div>
+                {!isLast && <hr />}
+              </li>
+            })
+          }
+        </ul>
+      </div>
+      <div className="action">
+        <p>{price} $</p>
+        <button><img src="/src/assets/cart.svg" alt="" /></button>
+        <a href="tel:+74956666666">Оставить заявку</a>
+      </div>
+    </section >
     <Footer />
   </>
 }

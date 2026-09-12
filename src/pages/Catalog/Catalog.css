@@ -654,3 +654,43 @@
     }
   }
 }
+
+
+/* Добавить в конец файла Catalog.css */
+
+.catalog nav ul li {
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.catalog nav ul li:hover {
+  color: #C9964F;
+}
+
+.catalog .pagintaion .pages li,
+.catalog .pagintaion .start,
+.catalog .pagintaion .end {
+  user-select: none;
+  transition: opacity 0.2s ease;
+}
+
+.catalog .pagintaion .pages li:not(.current):hover {
+  color: #C9964F;
+}
+
+.catalog .catalogList .no-results {
+  grid-column: 1 / -1;
+  padding: 60px 20px;
+  text-align: center;
+  font-family: "Montserrat";
+  font-size: 1.6rem;
+  color: #7A7A7A;
+  border: 1px dashed #D4D4D4;
+  border-radius: 8px;
+}
+
+@media (min-width: 768px) {
+  .catalog .catalogList .no-results {
+    font-size: 2rem;
+  }
+}

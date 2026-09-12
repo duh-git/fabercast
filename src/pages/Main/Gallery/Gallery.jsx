@@ -7,11 +7,11 @@ import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
 
 const mockData = [
-  { image: "./gallery-1.png", category: "Комоды", name: "Комод “Geometry”", link: "example", price: 999 },
-  { image: "./gallery-2.png", category: "Столы", name: "Стол “Nordic”", link: "example", price: 1999 },
-  { image: "./gallery-3.png", category: "Стулья", name: "Стул “Rein”", link: "example", price: 399 },
-  { image: "./gallery-4.png", category: "Тумбы", name: "Тумба “Art Faces”", link: "example", price: 999 },
-]
+  { image: "./gallery-1.png", category: "Комоды", name: 'Комод "Geometry"', link: "2", price: 999 },
+  { image: "./gallery-2.png", category: "Столы", name: 'Стол "Nordic"', link: "1", price: 1999 },
+  { image: "./gallery-3.png", category: "Стулья", name: 'Стул "Rein"', link: "4", price: 399 },
+  { image: "./gallery-4.png", category: "Тумбы", name: 'Тумба "Art Faces"', link: "3", price: 999 },
+];
 
 export default function Gallery() {
   return <section id="gallery" className="gallery">

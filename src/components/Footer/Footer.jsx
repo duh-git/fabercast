@@ -17,6 +17,7 @@ export default function Footer() {
       <li><a href="/catalog">Продукция</a></li>
       <li><a href="/#inspiration">Портфолио</a></li>
       <li><a href="/#contacts">Контакты</a></li>
+      <li><a href="/confidentiality">Политика <br /> конфиденциальности</a></li>
     </ul>
     <ul className="footer__contact">
       <li><a href="tel:+89618205070">+7 (961) 820-50-70</a></li>

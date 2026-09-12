@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Main, Catalog, Product } from "./pages";
-import { Header } from "./components";
+import { Confidentiality } from "./pages/documents";
 import './App.css';
 
 export default function App() {
@@ -10,6 +10,7 @@ export default function App() {
         <Route path="/" element={<Main />} />
         <Route path="/catalog" element={<Catalog />} />
         <Route path="/product/:id" element={<Product />} />
+        <Route path="/confidentiality" element={<Confidentiality />} />
       </Routes>
     </BrowserRouter>
   );

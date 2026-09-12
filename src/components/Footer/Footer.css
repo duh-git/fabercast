@@ -37,7 +37,7 @@ footer {
   }
 
   .footer__about {
-    display: none;
+    /* display: none; */
     order: 2;
   }
 

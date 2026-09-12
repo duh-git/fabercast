@@ -25,10 +25,10 @@ const mockData = {
     { name: "Матовая латунь", desc: "Деликатный благородный акцент", img: "/brass.png" },
   ],
   asideInfo: [
-    { title: "Натуральный шпон", desc: "Тёплая фактура натурального ореха.", img: "/src/assets/aside-1.svg" },
-    { title: "Матовая латунь", desc: "Деликатный золотистый акцент.", img: "/src/assets/aside-2.svg" },
-    { title: "Мягкая геометрия", desc: "Плавные линии и выразительный силуэт.", img: "/src/assets/aside-3.svg" },
-    { title: "Ручная отделка", desc: "Внимание к каждой детали изделия.", img: "/src/assets/aside-4.svg" },
+    { title: "Натуральный шпон", desc: "Тёплая фактура натурального ореха.", img: "/aside-1.svg" },
+    { title: "Матовая латунь", desc: "Деликатный золотистый акцент.", img: "/aside-2.svg" },
+    { title: "Мягкая геометрия", desc: "Плавные линии и выразительный силуэт.", img: "/aside-3.svg" },
+    { title: "Ручная отделка", desc: "Внимание к каждой детали изделия.", img: "/aside-4.svg" },
   ],
 }
 
@@ -114,7 +114,7 @@ export default function Product() {
       </div>
       <div className="action">
         <p>{price} $</p>
-        <button><img src="/src/assets/cart.svg" alt="" /></button>
+        <button><img src="/cart.svg" alt="" /></button>
         <a href="tel:+89618205070">Оставить заявку</a>
       </div>
     </section >

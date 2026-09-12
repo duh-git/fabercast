@@ -15,7 +15,7 @@ export default function Catalog() {
           <li>Освещение (0)</li>
         </ul>
         <div className="search">
-          <img src="/src/assets/search.svg" alt="search" />
+          <img src="/search.svg" alt="search" />
           <input id="search-input" type="text" placeholder="Поиск по каталогу..." />
         </div>
       </nav>

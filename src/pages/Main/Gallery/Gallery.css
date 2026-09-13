@@ -6,10 +6,12 @@
   align-items: start;
   /* overflow: hidden; */
 
-  background: linear-gradient(#1C1C1C -100%, #000000);
+  background-color: #FAF7F3;
+  /* background: linear-gradient(#1C1C1C -100%, #000000); */
 
   font-family: "Montserrat Alternates";
-  color: #FFFFFF;
+  color: #000;
+  /* color: #FFFFFF; */
 
   h2 {
     position: relative;

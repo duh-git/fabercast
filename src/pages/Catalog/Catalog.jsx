@@ -42,10 +42,7 @@ export default function Catalog() {
     }, {});
     return [
       { name: "Все", count: catalogItems.length },
-      { name: "Столы", count: counts["Столы"] || 0 },
-      { name: "Стулья", count: counts["Стулья"] || 0 },
-      { name: "Комоды", count: counts["Комоды"] || 0 },
-      { name: "Освещение", count: counts["Освещение"] || 0 },
+      ...Object.entries(counts).map(([name, count]) => ({ name, count })),
     ];
   }, []);
 
@@ -101,14 +98,14 @@ export default function Catalog() {
             currentItems.map((item) => (
               <li key={item.id}>
                 <div>
-                  <img src={item.image} alt={item.name} />
+                  <img src={item.preview} alt={item.name} />
                   <p className="catcoll">{item.tag}</p>
                   <h2 className="name">{item.name}</h2>
                 </div>
                 <div className="cardInfo">
                   <p className="category">{item.category}</p>
                   <p className="material">{item.material}</p>
-                  <p className="price">{item.price} $</p>
+                  <p className="price">{item.price}₽</p>
                   <div className="action">
                     <Link to={`/product/${item.id}`}>Подробнее</Link>
                     <button>Оставить заявку</button>

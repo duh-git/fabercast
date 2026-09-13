@@ -7,7 +7,7 @@ export default function GalleryCard({ image, category, name, link, price }) {
     <h3>{name}</h3>
     <div className="gallery-card-action">
       <a href={`/product/${link}`}>Подробнее</a>
-      <button>{price} $</button>
+      <button>{price}₽</button>
     </div>
   </li >
 }

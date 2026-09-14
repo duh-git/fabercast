@@ -1,6 +1,7 @@
-import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import logo from "/fabercast-logo.svg";
+import CallModal from "../CallModal/CallModal";
+import { openCallModal } from "../../utils/openCallModal";
 import "./Header.css";
 
 export default function Header() {
@@ -9,7 +10,7 @@ export default function Header() {
   return (
     <header className={isOpen ? "open" : ""}>
       <a href="/#" className="logo-wrapper">
-        <img src={logo} style={{ height: 80 }} alt="Fabercast logo" />
+        <img src={logo} alt="Fabercast logo" />
         <div className="logo-text">
           <h2>fabercast</h2>
           <p>Мебельная фабрика · 1978</p>
@@ -25,9 +26,9 @@ export default function Header() {
         </ul>
       </nav>
 
-      <a className="phone-number" href="tel:+89618205070">
+      <button className="phone-number" onClick={openCallModal}>
         +7 (961) 820-50-70
-      </a>
+      </button>
 
       <button
         className="burger"
@@ -38,6 +39,7 @@ export default function Header() {
         <span></span>
         <span></span>
       </button>
+      <CallModal />
     </header>
   );
 }

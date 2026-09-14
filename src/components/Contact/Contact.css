@@ -36,8 +36,8 @@
     background: linear-gradient(to top, #010101, #18181833);
   }
 
-  a {
-    background-color: #C28A3C;
+  a, button {
+    background-color: #CA6B34;
     border-radius: 4px;
     padding: 15px 20px;
 

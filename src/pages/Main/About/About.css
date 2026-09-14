@@ -6,7 +6,6 @@
   justify-content: center;
   position: relative;
   padding: 40px;
-  background-color: #FAF7F3;
 
   .about-image {
     position: relative;
@@ -29,7 +28,7 @@
       content: "";
       height: 90%;
       width: 80%;
-      border: 2px solid #C28A3C;
+      border: 2px solid #CA6B34;
       left: 0;
       top: 0;
       transform: translateY(-4%);
@@ -45,7 +44,7 @@
       bottom: 0;
       transform: translate(-10%, 30%);
 
-      background-color: #C28A3C;
+      background-color: #CA6B34;
       border-top-left-radius: 30px;
       border-bottom-right-radius: 30px;
 
@@ -66,7 +65,7 @@
       font-size: 1.2rem;
       font-family: "Montserrat Alternates";
       text-transform: uppercase;
-      color: #C28A3C;
+      color: #CA6B34;
       letter-spacing: 0.12em;
     }
 
@@ -79,7 +78,7 @@
       line-height: 1;
 
       span {
-        color: #C28A3C;
+        color: #CA6B34;
       }
 
       &::after {
@@ -89,7 +88,7 @@
         bottom: -10px;
         height: 1px;
         width: 160px;
-        background-color: #C28A3C;
+        background-color: #CA6B34;
       }
     }
 

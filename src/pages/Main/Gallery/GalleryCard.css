@@ -12,7 +12,7 @@
     margin: 25px auto 10px 25px;
     text-transform: lowercase;
 
-    color: #C28A3C;
+    color: #CA6B34;
     /* font-size: 1.8rem; */
     font-size: 1rem;
   }
@@ -56,7 +56,7 @@
     flex: 1.25;
     /* color: #000000; */
     color: #fff;
-    background-color: #C28A3C;
+    background-color: #CA6B34;
     border-radius: 5px;
   }
 }

@@ -2,6 +2,7 @@
 import { Link, useParams } from "react-router-dom";
 import { Header, Footer } from "../../components";
 import { getProductById } from "../Catalog/mockData";
+import { openCallModal } from "../../utils/openCallModal";
 import "./Product.css";
 
 // Словарь для перевода ключей габаритов
@@ -166,10 +167,10 @@ export default function Product() {
 
         <div className="action">
           <p>{price}₽</p>
-          <button>
+          <button className="cart">
             <img src="/cart.svg" alt="В корзину" />
           </button>
-          <a href="tel:+89618205070">Оставить заявку</a>
+          <button className="leave-request" onClick={openCallModal}>Оставить заявку</button>
         </div>
       </section>
       <Footer />

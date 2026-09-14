@@ -24,10 +24,13 @@ footer {
       font-size: 1.1rem;
       font-family: "Montserrat Alternates";
       letter-spacing: 0.12em;
-      color: #3E3E3E;
+
+      button {
+        letter-spacing: inherit;
+      }
 
       &:nth-child(1) {
-        color: #000;
+        font-size: 1.6em;
       }
     }
   }
@@ -110,8 +113,16 @@ footer {
       font-size: 4rem;
     }
 
-    &>ul>li {
-      font-size: 1.4rem;
+    &>ul {
+      gap: 18px;
+
+      li {
+        font-size: 1.4rem;
+
+        &:nth-child(1) {
+          font-size: 1.8em;
+        }
+      }
     }
 
     .footer__social {
@@ -154,8 +165,15 @@ footer {
       font-size: 6.7rem;
     }
 
-    &>ul>li {
-      font-size: 1.8rem;
+    &>ul {
+      gap: 26px;
+      li {
+        font-size: 1.8rem;
+
+        &:nth-child(1) {
+          font-size: 2.2rem;
+        }
+      }
     }
 
     .footer__social {

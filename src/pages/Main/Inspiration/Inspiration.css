@@ -14,7 +14,7 @@
 
     font-size: 2rem;
     letter-spacing: 0.12em;
-    color: #C28A3C;
+    color: #CA6B34;
     text-transform: lowercase;
 
     &::after {
@@ -22,7 +22,7 @@
       position: absolute;
       height: 2px;
       width: 15px;
-      background-color: #C28A3C;
+      background-color: #CA6B34;
       left: -25px;
       top: 50%;
     }
@@ -57,7 +57,7 @@
         left: 0;
         height: 2px;
         width: 100%;
-        background-color: #C28A3C;
+        background-color: #CA6B34;
       }
     }
   }
@@ -98,7 +98,7 @@
         font-size: 1.8rem;
         font-size: 1rem;
         text-transform: uppercase;
-        color: #C28A3C;
+        color: #CA6B34;
       }
 
       h3 {
@@ -115,7 +115,7 @@
         position: absolute;
         height: 100%;
         width: 100%;
-        border: 1px solid #C28A3C;
+        border: 1px solid #CA6B34;
         left: -8px;
         top: -14px;
         border-radius: 10px;

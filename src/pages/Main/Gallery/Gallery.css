@@ -6,7 +6,6 @@
   align-items: start;
   /* overflow: hidden; */
 
-  background-color: #FAF7F3;
   /* background: linear-gradient(#1C1C1C -100%, #000000); */
 
   font-family: "Montserrat Alternates";
@@ -20,7 +19,7 @@
 
     font-size: 2rem;
     letter-spacing: 0.12em;
-    color: #C28A3C;
+    color: #CA6B34;
     text-transform: lowercase;
 
     &::after {
@@ -28,7 +27,7 @@
       position: absolute;
       height: 2px;
       width: 15px;
-      background-color: #C28A3C;
+      background-color: #CA6B34;
       left: -25px;
       top: 50%;
     }
@@ -66,7 +65,7 @@
         left: 0;
         height: 2px;
         width: 100%;
-        background-color: #C28A3C;
+        background-color: #CA6B34;
       }
     }
   }
@@ -90,7 +89,7 @@
     }
 
     .swiper-pagination-bullet {
-      background-color: #C28A3C;
+      background-color: #CA6B34;
     }
   }
 }

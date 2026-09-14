@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useState, useMemo } from "react";
 import { Header, Contact, Footer } from "../../components";
 import { catalogItems, ITEMS_PER_PAGE } from "./mockData";
+import { openCallModal } from "../../utils/openCallModal";
 import "./Catalog.css";
 
 export default function Catalog() {
@@ -12,13 +13,16 @@ export default function Catalog() {
 
   // Фильтрация по категории и поиску
   const filteredItems = useMemo(() => {
+    const query = searchQuery.trim().toLowerCase();
     return catalogItems.filter((item) => {
       const matchesCategory =
         activeCategory === "Все" || item.category === activeCategory;
+
       const matchesSearch =
-        searchQuery.trim() === "" ||
-        item.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        item.material.toLowerCase().includes(searchQuery.toLowerCase());
+        query === "" ||
+        (item.name?.toLowerCase() ?? "").includes(query) ||
+        (item.material?.toLowerCase() ?? "").includes(query);
+
       return matchesCategory && matchesSearch;
     });
   }, [activeCategory, searchQuery]);
@@ -59,6 +63,20 @@ export default function Catalog() {
   const goToPage = (page) => {
     if (page >= 1 && page <= totalPages) {
       setCurrentPage(page);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
+  const nextPage = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage(currentPage + 1);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
+  const prevPage = (page) => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
   };
@@ -108,7 +126,7 @@ export default function Catalog() {
                   <p className="price">{item.price}₽</p>
                   <div className="action">
                     <Link to={`/product/${item.id}`}>Подробнее</Link>
-                    <button>Оставить заявку</button>
+                    <button onClick={openCallModal}>Оставить заявку</button>
                   </div>
                 </div>
               </li>
@@ -120,13 +138,14 @@ export default function Catalog() {
 
         {totalPages > 1 && (
           <div className="pagintaion">
-            <p
+            {/* <p
               className="start"
               onClick={() => goToPage(1)}
               style={{ cursor: safePage === 1 ? "default" : "pointer", opacity: safePage === 1 ? 0.4 : 1 }}
             >
               1
-            </p>
+            </p> */}
+            <p className="prev-page" onClick={prevPage}>{"<"}</p>
             <ul className="pages">
               {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
                 <li
@@ -139,13 +158,14 @@ export default function Catalog() {
                 </li>
               ))}
             </ul>
-            <p
+            <p className="next-page" onClick={nextPage}>{">"}</p>
+            {/* <p
               className="end"
               onClick={() => goToPage(totalPages)}
               style={{ cursor: safePage === totalPages ? "default" : "pointer", opacity: safePage === totalPages ? 0.4 : 1 }}
             >
               {totalPages}
-            </p>
+            </p> */}
           </div>
         )}
       </section>

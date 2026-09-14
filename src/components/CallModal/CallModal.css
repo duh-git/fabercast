@@ -1,0 +1,145 @@
+.callModal {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 30px;
+
+  font-family: "Cormorant Garamond";
+  font-size: 1.6rem;
+  white-space: nowrap;
+
+  opacity: 0;
+  animation: modalFadeIn 0.35s ease forwards;
+
+  .schedule {
+    display: grid;
+    grid-template-areas:
+      "from from-time"
+      "till till-time";
+
+    dt {
+      margin-right: 30px;
+    }
+
+    dt:nth-child(1) {
+      grid-area: "from";
+    }
+
+    dd:nth-child(1) {
+      grid-area: "from-time";
+    }
+
+    dt:nth-child(2) {
+      grid-area: "till";
+    }
+
+    dd:nth-child(2) {
+      grid-area: "till-time";
+    }
+  }
+
+  hr {
+    width: 100%;
+    height: 1px;
+    background-color: #CA6B34;
+  }
+
+  .info {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .call {
+    padding: 10px 16px;
+    margin: 0;
+    border-radius: 4px;
+
+    font-family: "Geist";
+    font-size: 1rem;
+    font-weight: medium;
+    color: #FFFFFF;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background-color: #CA6B34;
+
+    transition: background-color 0.2s ease, transform 0.2s ease;
+
+    &:hover {
+      background-color: #b85e2b;
+      transform: translateY(-1px);
+    }
+  }
+
+  &::backdrop {
+    background-color: #3B3B3B;
+    opacity: 0;
+    animation: backdropFadeIn 0.35s ease forwards;
+    /* курсор, чтобы было понятно, что клик закроет */
+    cursor: pointer;
+  }
+}
+
+/* Скрываем закрытую модалку */
+.callModal:not([open]) {
+  display: none;
+}
+
+/* === Анимация появления === */
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -45%) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes backdropFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 0.2;
+  }
+}
+
+/* === Анимация закрытия === */
+.callModal.closing {
+  animation: modalFadeOut 0.25s ease forwards;
+}
+
+.callModal.closing::backdrop {
+  animation: backdropFadeOut 0.25s ease forwards;
+}
+
+@keyframes modalFadeOut {
+  from {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  to {
+    opacity: 0;
+    transform: translate(-50%, -45%) scale(0.96);
+  }
+}
+
+@keyframes backdropFadeOut {
+  from {
+    opacity: 0.2;
+  }
+
+  to {
+    opacity: 0;
+  }
+}

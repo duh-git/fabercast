@@ -12,7 +12,7 @@
     position: absolute;
     height: 100%;
     width: 100%;
-    border: 1px solid #C28A3C;
+    border: 1px solid #CA6B34;
     left: -30px;
     top: -20px;
     border-radius: 10px;
@@ -44,7 +44,7 @@
     font-family: "Montserrat";
     font-size: 1.8rem;
     text-transform: uppercase;
-    color: #C28A3C;
+    color: #CA6B34;
   }
 
   h3 {
